@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://developer.github.com/assets/images/rocketship.png" alt="ROR Resources Cover" style="max-width:1%;">
+	<img src="https://assets-cdn.github.com/images/modules/site/personal-ill-learn.png" alt="ROR Resources Cover" style="max-width:1%;">
 </p>
 
 <h1 align="center">Agenda</h1>

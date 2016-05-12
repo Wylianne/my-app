@@ -4,18 +4,28 @@ import java.util.ArrayList;
 import org.jooby.Jooby;
 import org.jooby.Results;
 /**
- * @author jooby generator
- */
+* @author: Wylianne Costa
+* Aplicação para inserção e consulta de contatos
+* V. 1.0
+*/
 public class App extends Jooby {
 	private ArrayList<Agenda> contacts = new ArrayList<>();
+        
         private int ultimoId = 1;
 
 
 	{
+            /**
+            * Método para retornar o "Welcome" ao usuário.
+            * É executado quando nada é passado na URL.
+            */
             get("/", () -> "Welcome!");
 
-                
-            get("todos/", () ->{
+            /**
+            * Método para retornar o todos os cadastros ao usuário.
+            * É executado quando /todos é passado na URL.
+            */
+            get("/todos", () ->{
 
                 String message = "";
                 String result = "";
@@ -38,6 +48,13 @@ public class App extends Jooby {
 	        return Results.with(message).status(statusCode).type("text/plain");
 	    });
 	
+            
+            
+            /**
+            * Método para cadastrar um novo contato.
+            * É executado quando dados são passados via post e /todos é passado na URL.
+            * Dados necessários para o cadastro: Nome e Telefone.
+            */
             post("/contact", req -> {
                 ObjectMapper mapper = new ObjectMapper();
 
