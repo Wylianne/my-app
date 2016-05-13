@@ -22,7 +22,7 @@ public class App extends Jooby {
             get("/", () -> "Welcome!");
 
             /**
-            * Método para retornar o todos os cadastros ao usuário.
+            * Método para retornar todos os cadastros ao usuário.
             * É executado quando /todos é passado na URL.
             */
             get("/todos", () ->{

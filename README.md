@@ -16,8 +16,9 @@
 ## :computer: Atividades
 Developer | Method | @Test | Descrição
 :-- | :-- | :-- | :--
-[ Wylianne Costa   ] | Get/todos |              | Exibe todos os cadastros;
-[ Wylianne Costa   ] | Post/todos |              | Inclui novo cadastro;
+[ Wylianne Costa   ] | Get |  OK       | Exibe "Welcome";
+[ Wylianne Costa   ] | Get/todos |  OK       | Exibe todos os cadastros;
+[ Wylianne Costa   ] | Post/todos |  OK       | Inclui novo cadastro;
 
 
 ## :beginner: Requisitos 
@@ -44,3 +45,18 @@ git pull nomedoSeuProjeto master | Trás todas as modificações do GitHub para 
 git config --global user.email seuEmail | Seta um email global para o computador;
 git config --global user.name seuNome | Seta um nome global para o computador;
 
+
+A aplicação possui três métodos, são eles:
+	* GET: Retorna "Welcome" no index;
+	* GET/TODOS: Retorna a lista de contatos;
+	* POST/TODOS: Adiciona um novo contato passando os dados(Nome e telefone) através de POST.
+
+
+Para executá-la é preciso iniciar o servidor com o código que está na tabela "Comandos Básicos (Criação do projeto - MVN)".
+Com o servidor iniciado acessamos a aplicação através de url.
+## :octocat: Acessando aplicação
+URL | Funcionalidade
+:-- | :-- 
+http://localhost:8080/ | Retorna "Welcome" no index;
+http://localhost:8080/todos | Retorna a lista de contatos;
+http://localhost:8080/todos | Adiciona um novo contato.
