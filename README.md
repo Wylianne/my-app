@@ -46,7 +46,7 @@ git config --global user.email seuEmail | Seta um email global para o computador
 git config --global user.name seuNome | Seta um nome global para o computador;
 
 
-A aplicação possui três métodos, são eles:
+## A aplicação possui três métodos, são eles:
 	* GET: Retorna "Welcome" no index;
 	* GET/TODOS: Retorna a lista de contatos;
 	* POST/TODOS: Adiciona um novo contato passando os dados(Nome e telefone) através de POST.
