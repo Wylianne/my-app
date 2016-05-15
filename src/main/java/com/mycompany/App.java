@@ -6,13 +6,16 @@ import org.jooby.Results;
 /**
 * @author: Wylianne Costa
 * Aplicação para inserção e consulta de contatos
-* V. 1.0
+* Atualiazação:
+*   - Método para retornar um contato por id.
+*   - Comentários sobre os parametros via post.
+*   - Comentários da classe Agenda.
+* V. 1.1
 */
 public class App extends Jooby {
 	private ArrayList<Agenda> contacts = new ArrayList<>();
         
         private int ultimoId = 1;
-
 
 	{
             /**
@@ -20,6 +23,42 @@ public class App extends Jooby {
             * É executado quando nada é passado na URL.
             */
             get("/", () -> "Welcome!");
+            
+            
+            /**
+            * Método para retornar um contato.
+            * É executado quando /todos é passado na URL junto a um parametro.   
+            * @param id int - id do contato.
+            */
+            get("/todos/:id", req ->{
+                
+                int id = Integer.parseInt(req.param("id").value());
+                String message = "";
+                int statusCode = 404;
+                boolean find = false;
+                
+                System.out.println("-----   Pesquisa de Contato   -----");
+
+                if (contacts.size() > 0) {
+                    for (Agenda contact : contacts) {
+                        statusCode = 200;
+                        if (contact.getId() == id){
+                            find = true;
+                            message = message+ "ID: "+ contact.getId() +"Nome: " + contact.getName() + ",  Telefone:" + contact.getPhone();
+                            message = message + "\n";
+                            message = message + "\n";
+                        }
+                    } 
+                }
+                
+                if (!find){
+                    message = "Contato não localizado!";
+                }
+
+	        return Results.with(message).status(statusCode).type("text/plain");
+	    });
+            
+            
 
             /**
             * Método para retornar todos os cadastros ao usuário.
@@ -28,7 +67,6 @@ public class App extends Jooby {
             get("/todos", () ->{
 
                 String message = "";
-                String result = "";
                 int statusCode = 404;
                 System.out.println("-----   Lista de Contatos   -----");
 
@@ -53,7 +91,8 @@ public class App extends Jooby {
             /**
             * Método para cadastrar um novo contato.
             * É executado quando dados são passados via post e /todos é passado na URL.
-            * Dados necessários para o cadastro: Nome e Telefone.
+            * @param name String - Nome do contato.
+            * @param phone String - Número do contato.
             */
             post("/contact", req -> {
                 ObjectMapper mapper = new ObjectMapper();
@@ -76,8 +115,8 @@ public class App extends Jooby {
                     message = mapper.writeValueAsString(contact);
                 }
 
-            return Results.with(message).status(statusCode).type("text/plain");
-        });
+                return Results.with(message).status(statusCode).type("text/plain");
+            });
         }
 
 

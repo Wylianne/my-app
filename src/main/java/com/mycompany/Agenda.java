@@ -15,19 +15,28 @@
  */
 package com.mycompany;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+* @author: Wylianne Costa
+* V. 1.0
+*/
+
+
 public class Agenda {
     
     int id;
     String name;
     String phone;
-
-    public Agenda(int id, String name, String phone) {
+    
+    //Instaciando a classe
+    public Agenda(@JsonProperty("id") int id, @JsonProperty("name") String name, @JsonProperty("phone") String phone) {
         this.id = id;
         this.name = name;
         this.phone = phone;
     }
 
-
+        //Métodos de GETs e SETs da classe
 	public int getId() {
 		return id;
 	}

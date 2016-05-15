@@ -55,8 +55,8 @@ git config --global user.name seuNome | Seta um nome global para o computador;
 Para executá-la é preciso iniciar o servidor com o código que está na tabela "Comandos Básicos (Criação do projeto - MVN)".
 Com o servidor iniciado acessamos a aplicação através de url.
 ## :octocat: Acessando aplicação
-URL | Funcionalidade
-:-- | :-- 
-http://localhost:8080/ | Retorna "Welcome" no index;
-http://localhost:8080/todos | Retorna a lista de contatos;
-http://localhost:8080/todos | Adiciona um novo contato.
+Método | URL | Funcionalidade
+:-- | :-- | :-- 
+GET | http://localhost:8080/ | Retorna "Welcome" no index;
+GET | http://localhost:8080/todos | Retorna a lista de contatos;
+POST | http://localhost:8080/todos | Adiciona um novo contato (name: "Paulo" phone: "767868687").
