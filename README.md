@@ -59,4 +59,5 @@ Método | URL | Funcionalidade
 :-- | :-- | :-- 
 GET | http://localhost:8080/ | Retorna "Welcome" no index;
 GET | http://localhost:8080/todos | Retorna a lista de contatos;
+GET | http://localhost:8080/todos/:id | Retorna um contato quando id é passa na url;
 POST | http://localhost:8080/todos | Adiciona um novo contato (name: "Paulo" phone: "767868687").
