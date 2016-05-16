@@ -31,6 +31,13 @@
       <artifactId>jooby</artifactId>
     </dependency>
 
+    <!-- Jackson -->
+    <dependency>
+      <groupId>org.jooby</groupId>
+      <artifactId>jooby-jackson</artifactId>
+    </dependency>
+
+
     <!-- Server -->
     <dependency>
       <groupId>org.jooby</groupId>
@@ -69,10 +76,17 @@
       <artifactId>httpmime</artifactId>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.3.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy</artifactId>
+      <version>1.8.3</version>
       <type>jar</type>
     </dependency>
   </dependencies>

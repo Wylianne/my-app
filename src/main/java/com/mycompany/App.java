@@ -3,14 +3,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import org.jooby.Jooby;
 import org.jooby.Results;
+import org.jooby.json.Jackson;
+
 /**
-* @author: Wylianne Costa
+* @author Wylianne Costa
 * Aplicação para inserção e consulta de contatos
 * Atualiazação:
 *   - Método para retornar um contato por id.
 *   - Comentários sobre os parametros via post.
 *   - Comentários da classe Agenda.
-* V. 1.1
+* V. 1.01
 */
 public class App extends Jooby {
 	private ArrayList<Agenda> contacts = new ArrayList<>();
@@ -18,14 +20,20 @@ public class App extends Jooby {
         private int ultimoId = 1;
 
 	{
+            use(new Jackson());
+        
             /**
+            * @author Wylianne Costa
+            * @version 1.00
             * Método para retornar o "Welcome" ao usuário.
-            * É executado quando nada é passado na URL.
+            * É executado quando nada é passado na URL
             */
             get("/", () -> "Welcome!");
             
             
-            /**
+            /**   
+            * @author Wylianne Costa
+            * @version 1.01
             * Método para retornar um contato.
             * É executado quando /todos é passado na URL junto a um parametro.   
             * @param id int - id do contato.
@@ -61,8 +69,10 @@ public class App extends Jooby {
             
 
             /**
+            * @author Wylianne Costa
+            * @version 1.00
             * Método para retornar todos os cadastros ao usuário.
-            * É executado quando /todos é passado na URL.
+            * É executado quando /todos é passado na URL.            
             */
             get("/todos", () ->{
 
@@ -89,6 +99,8 @@ public class App extends Jooby {
             
             
             /**
+            * @author Wylianne Costa
+            * @version 1.00
             * Método para cadastrar um novo contato.
             * É executado quando dados são passados via post e /todos é passado na URL.
             * @param name String - Nome do contato.

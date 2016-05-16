@@ -33,5 +33,16 @@ public class AppTest extends BaseTest {
             .body(json, "application/json")
             .expect(200);
     }
+    
+    @Test
+    public void consultaId() throws Exception {
+        String json = "{\n" +
+            "    \"id\": \"1\"\n" +
+        "}";
+
+        server.get("/todos")
+            .body(json, "application/json")
+            .expect(200);
+    }
 
 }
