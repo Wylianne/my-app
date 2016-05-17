@@ -51,7 +51,7 @@ public class App extends Jooby {
                     for (Agenda contact : contacts) {
                         statusCode = 200;
                         if (contact.getId() == id){
-                            json_str = "{\"ID\":\""+ contact.getId() +"\",\"Name\":\""+ contact.getName() +"\",\"Phone\":\""+ contact.getPhone()+"\"}";
+                            json_str = "{\"ID\":"+ contact.getId() +",\"Name\":\""+ contact.getName() +"\",\"Phone\":\""+ contact.getPhone()+"\"}";
                         }
                     } 
                 }
@@ -81,7 +81,7 @@ public class App extends Jooby {
                             json_str = json_str + ",";
                         }
 
-                        json_str = json_str + "{\"ID\":\""+ contact.getId() +"\",\"Name\":\""+ contact.getName() +"\",\"Phone\":\""+ contact.getPhone()+"\"}";
+                        json_str = json_str + "{\"ID\":"+ contact.getId() +",\"Name\":\""+ contact.getName() +"\",\"Phone\":\""+ contact.getPhone()+"\"}";
                     } 
                     
                 }
