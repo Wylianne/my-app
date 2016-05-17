@@ -35,7 +35,16 @@
     <dependency>
       <groupId>org.jooby</groupId>
       <artifactId>jooby-jackson</artifactId>
-    </dependency>
+      <version>1.0.0.CR3</version>
+      <type>jar</type>
+    </dependency>   
+
+    <!-- http://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20160212</version>
+    </dependency>   
 
 
     <!-- Server -->

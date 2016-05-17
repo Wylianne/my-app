@@ -14,6 +14,10 @@
     <artifact name="com.google.inject:guice:4.0" />
     <artifact name="javax.inject:javax.inject:1" />
     <artifact name="aopalliance:aopalliance:1.0" />
+    <artifact name="org.jooby:jooby-jackson:1.0.0.CR3" />
+    <artifact name="com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.7.3" />
+    <artifact name="com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.7.3" />
+    <artifact name="org.json:json:20160212" />
     <artifact name="org.jooby:jooby-netty:1.0.0.CR3" />
     <artifact name="io.netty:netty-codec-http:4.1.0.CR7" />
     <artifact name="io.netty:netty-codec:4.1.0.CR7" />
@@ -38,6 +42,13 @@
     <artifact name="com.fasterxml.jackson.core:jackson-databind:2.3.1" />
     <artifact name="com.fasterxml.jackson.core:jackson-annotations:2.3.0" />
     <artifact name="com.fasterxml.jackson.core:jackson-core:2.7.3" />
+    <artifact name="org.codehaus.groovy:groovy:1.8.3" />
+    <artifact name="antlr:antlr:2.7.7" />
+    <artifact name="asm:asm:3.2" />
+    <artifact name="asm:asm-commons:3.2" />
+    <artifact name="asm:asm-util:3.2" />
+    <artifact name="asm:asm-analysis:3.2" />
+    <artifact name="asm:asm-tree:3.2" />
   </resources>
   <dependencies>
   </dependencies>

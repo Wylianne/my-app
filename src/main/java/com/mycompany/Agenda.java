@@ -36,6 +36,10 @@ public class Agenda {
         this.phone = phone;
     }
 
+    Agenda() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
         //Métodos de GETs e SETs da classe
 	public int getId() {
 		return id;
